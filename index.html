@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colore Infinito</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensure canvas is behind potential UI elements */
+        #gameCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place canvas behind other elements */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <!-- UI elements will go here -->
+    <div id="ui-container">
+        <div id="scoreDisplay">Score: 0</div>
+        <div id="movesDisplay">Moves: 30</div>
+        <div id="levelDisplay">Level: 1</div>
+        <div id="objectiveDisplay">Target: 1000</div>
+    </div>
+
+    <!-- Import Three.js -->
+    <!-- Option 1: Use a CDN (easier for quick setup) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js" 
+            }
+        }
+    </script>
+    <!-- Option 2: Local install (requires npm/bundler setup) -->
+    <!-- <script type="module" src="node_modules/three/build/three.module.js"></script> -->
+
+    <script type="module" src="main.js"></script>
+</body>
+</html> 
